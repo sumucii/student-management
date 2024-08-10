@@ -11,7 +11,8 @@ class Student:  # 定义学生类
         self.grade = grade  # 学生成绩
 
     @classmethod
-    def from_dict(cls, data):  # 从字典创建学生对象
+    # 从字典创建学生对象  cls是类方法的第一个参数，表示类本身，类似于self表示实例本身   data是字典数据
+    def from_dict(cls, data):
         return cls(
             student_id=data.get('id'),  # 获取学生ID
             name=data.get('name'),  # 获取学生姓名
